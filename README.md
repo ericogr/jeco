@@ -10,24 +10,24 @@ Jogo de Eliminação de Combinações Online
 ## Authentication
 
 ### Facebook
-**ClientID:** FACEBOOK_CLIENT_ID=
+**ClientID:** FACEBOOK_CLIENT_ID=`your-client-id`
 
-**Secret:** FACEBOOK_CLIENT_SECRET=
+**Secret:** FACEBOOK_CLIENT_SECRET=`your-client-secret`
 
 ### Github
-**ClientID:** GITHUB_CLIENT_ID=
+**ClientID:** GITHUB_CLIENT_ID=`your-client-id`
 
-**Secret:** GITHUB_CLIENT_SECRET=
+**Secret:** GITHUB_CLIENT_SECRET=`your-client-secret`
 
 ### Google
-**ClientID:** GOOGLE_CLIENT_ID=
+**ClientID:** GOOGLE_CLIENT_ID=`your-client-id`
 
-**Secret:** GOOGLE_CLIENT_SECRET=
+**Secret:** GOOGLE_CLIENT_SECRET=`your-client-secret`
 
 ### Linkedin
-**ClientID:** LINKEDIN_CLIENT_ID=
+**ClientID:** LINKEDIN_CLIENT_ID=`your-client-id`
 
-**Secret:** LINKEDIN_CLIENT_SECRET=
+**Secret:** LINKEDIN_CLIENT_SECRET=`your-client-secret`
 
 ## Network
 

@@ -1,6 +1,6 @@
 # JECO
 Jogo de Eliminação de Combinações Online
-![alt text](https://github.com/ericogr/jeco/blob/master/client/assets/images/logotipo.svg "Logo")
+![alt tag](https://raw.githubusercontent.com/ericogr/jeco/master/docs/logotipo.png "Logo")
 
 [JECO online](http://jeco.ericogr.com.br)
 

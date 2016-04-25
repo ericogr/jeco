@@ -8,7 +8,8 @@ before_install:
  - sudo apt-get update
  - sudo apt-get install -y libappindicator1 fonts-liberation
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
- - sudo dpkg -i google-chrome*.deb
+ - sudo dpkg -i --force-depends google-chrome*.deb
+ - sudo apt-get install -f 
 before_script:
   - npm install -g bower grunt-cli
   - gem install sass

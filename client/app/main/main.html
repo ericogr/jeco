@@ -1,0 +1,155 @@
+<section>
+	<header>
+		<a href="/user">
+			<img src="assets/images/logotipo.svg" style="height: auto; width: 100%">
+		</a>
+	</header>
+	<article>
+		<p>
+			Neste jogo você deve criar combinações únicas para ganhar. Cada vez que uma nova é descoberta, você recebe pontos para subir no ranking.
+			Começe agora mesmo a criar combinações!
+		</p>
+		<div class="centralizar">
+			<a class="button button-primary button-jeco" href="/grid">Jogar</a>
+		</div>
+	</article>
+	<article>
+		<h3>Combinações</h3>
+		<p>
+			Existem 5 tipos de combinações definidas pela quantidade de elementos consecutivos. Cada uma pode fornecer pontuações diferentes:
+		</p>
+		<div class="row">
+			<ol class="lista-tipo-combinacao">
+				<li class="two columns" ng-repeat="c in combinacoes">
+					<span>
+						<p>{{obterNomePorTipoDeCombinacao(c)}}</p>
+						<div class="sequencia-tipo-combinacao-map {{obterNomePorTipoDeCombinacao(c).toLowerCase()}}"></div>
+						<p>com <strong>*{{c}}*</strong> elemento(s) consecutivo(s) obtenha {{pontosPorTipoCombinacao(c)}} pontos</p>
+					</span>
+				</li>
+			</ol>
+		</div>
+	</article>
+	<article>
+		<h3>Estatísticas</h3>
+		<p>
+			A medida que o jogo avança, novas combinações são descobertas. Veja quantas já foram criadas até agora:
+		</p>
+		<div class="row">
+			<ol class="lista-tipo-combinacao">
+				<li class="two columns" ng-repeat="c in combinacoes">
+					<span>
+						<div class="sequencia-tipo-combinacao-map {{obterNomePorTipoDeCombinacao(c).toLowerCase()}}"></div>
+						<p>descoberta <strong>{{combinacoesCriadasPorTipo(c)}}</strong> vezes</p>
+					</span>
+				</li>
+			</ol>
+		</div>
+	</article>
+	<article>
+		<h3>Ranking</h3>
+		<p>
+			De tempos em tempos a partida termina, a pontuação é zerada e as combinações ficam disponíveis novamente. Apesar disso, o ranking com os melhores jogadores são gravados e ficam disponíveis para <a href="/ranking-history">consulta.</a>
+			<span ng-show="proximaPartida > 0">A partida atual termina em <strong>{{proximaPartida}}</strong> dias.</span>
+			<strong ng-show="proximaPartida === 0">A partida iniciou HOJE!</strong>
+		</p>
+		<div class="row">
+		<table class="six columns" >
+			<tbody>
+			<tr ng-repeat="ranking in rankings | orderBy: '-user.points' | limitTo: 10:0" ng-if="$index < (rankings.length > 10 ? 5 : rankings.length / 2)">
+				<td>
+					<strong>#{{$index + 1}}</strong> - {{ranking.user.name}}
+					<p><strong>Pontos:</strong> {{ranking.user.points}}</p>
+					<p><strong>Combinações:</strong> {{ranking.user.combinations}}</p>
+					<p><strong>Nível:</strong> {{ranking.user.level}}</p>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<table class="six columns" >
+			<tbody>
+			<tr ng-repeat="ranking in rankings | orderBy: '-user.points' | limitTo: 10:0" ng-if="$index >= (rankings.length > 10 ? 5 : rankings.length / 2)">
+				<td>
+					<strong>#{{$index + 1}}</strong> - {{ranking.user.name}}
+					<p><strong>Pontos:</strong> {{ranking.user.points}}</p>
+					<p><strong>Combinações:</strong> {{ranking.user.combinations}}</p>
+					<p><strong>Nível:</strong> {{ranking.user.level}}</p>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		</div>
+		<p>
+			Exibindo somente as primeiras posições
+		</p>
+	</article>
+</section>
+<footer>
+	<h3>Sobre...</h3>
+	<p>
+		Desenvolvido por Érico G. Rimoli (EricoGR) v{{version}} com o objetivo de aprender novas tecnologias e conceitos.
+	</p>
+	<p>
+		<a href="https://bitbucket.org/ericogr/jeco-board-game/issues/new">Reporte bugs, melhorias ou sugestões clicando aqui.</a>
+	</p>
+	<p>Algumas tecnologias e frameworks utilizados:</p>
+	<div class="row" >
+		<ul class="six columns">
+			<li>
+				Javascript
+				<ul>
+					<li>NodeJS</li>
+					<li>Express</li>
+					<li>AngularJS</li>
+					<li>BlueBird</li>
+					<li>PassportJS</li>
+					<li>JWT</li>
+					<li>Winston</li>
+					<li>Entre outros...</li>
+				</ul>
+			</li>
+			<li>
+				Banco de dados
+				<ul>
+					<li>MongoDB</li>
+				</ul>
+			</li>
+			<li>
+				Cloud
+				<ul>
+					<li>OpenShift</li>
+				</ul>
+			</li>
+			<li>
+				OS (dev)
+				<ul>
+					<li>Linux (Xubuntu)</li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="six columns">
+			<li>
+				Testes
+				<ul>
+					<li>Jasmine</li>
+					<li>Sinon</li>
+					<li>Expect</li>
+					<li>Should</li>
+					<li>Entre outros...</li>
+				</ul>
+			</li>
+			<li>
+				Ferramentas e Utilitários
+				<ul>
+					<li>Yeoman</li>
+					<li>Grunt</li>
+					<li>Bower</li>
+					<li>Sass</li>
+					<li>Git</li>
+					<li>NPM</li>
+					<li>Entre outros...</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</footer>

@@ -1,0 +1,60 @@
+/* board */
+
+.board-grid {
+	.gr-grid-rect:hover {
+		animation: gridRect .5s linear;
+	}
+}
+
+.gr-grid-rect {
+      stroke: #0C648E;
+      fill: #99CDE6;
+      width: 43px;
+      height: 43px;
+      rx: 14;
+      ry: 14;
+
+    &.selected {
+		fill: #0C648E;
+	}
+
+	&.unselected {
+		fill: #99CDE6;
+	}
+}
+
+/* geral */
+.game-area {
+	text-align: center;
+	.info-box {
+		h6:first-child {
+			text-align: center;
+			border-top: 1px solid $background-color-header;
+			border-bottom: 1px solid $background-color-header;
+			margin: 0;
+		}
+
+		p {
+			text-align: left;
+			margin-top: 10px;
+		}
+	}
+}
+
+.warning {
+	animation: warning 1s infinite;
+}
+
+@keyframes warning {
+	0%, 100% { color: $warning-color-darken; }
+	50% { color: $warning-color-lighten; }
+}
+
+@keyframes gridRect {
+	0%, 100% { opacity: 1; }
+	50% { opacity: .4; }
+}
+
+.elemento-carregando {
+	vertical-align: middle;
+}

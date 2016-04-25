@@ -1,2 +1,4 @@
-# jeco
-Jogo de eliminação de combinações online
+# jeco-board-game
+JECO - Jogo de Eliminação de Combinações Online
+
+http://jeco.ericogr.com.br

@@ -1,0 +1,58 @@
+<section class="game-area">
+	<div class="row">
+		<div class="six columns info-box">
+			<h6>{{user.name}} (<a href="" ng-click="desconectar()">desconectar</a>)</h6>
+			<table class="u-full-width">
+				<thead>
+					<tr>
+						<th>Pontos</th>
+						<th>Comb</th>
+						<th>Nvl</th>
+						<th>Nxt</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{user.points}}</td>
+						<td>{{user.combinations}}</td>
+						<td>{{user.level}}</td>
+						<td>{{proximoNivel}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="six columns">
+			<gr-grid-board
+				class="board-grid"
+		  		values="board.value"
+		  		on-click="boardClick(line, column, value, countSelected, values)"
+		  		count-selected="countSelected"
+				rows="{{board.width}}"
+				columns="{{board.height}}"
+				width="215"
+				height="215">
+			</gr-grid-board>
+			<h6 id="pontos-previstos">{{messageBoard}}</h6>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns info-box">
+			<label class="warning">{{messageHelper}}</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns info-box">
+			<p>
+				<a id="btn-aguarde" class="button button-primary button-jeco"
+					ng-show="processing">Aguarde...</a>
+				<a id="btn-back" class="button button-primary button-jeco"
+					href="/"
+					ng-show="!processing">Voltar</a>
+				<a id="btn-combine" class="button button-primary button-jeco"
+					ng-hide="processing || countSelected < board.minSelections || countSelected > board.maxSelections"
+					ng-click="submit(board.value)">Combinar</a>
+				<img ng-show="processing" class="elemento-carregando" src="assets/images/loading.gif">
+			</p>
+		</div>
+	</div>
+</section>

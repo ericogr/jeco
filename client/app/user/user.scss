@@ -1,0 +1,25 @@
+.login-social-map {
+	$login-social-map-width: 177px;
+	background: url('/assets/images/login-social.png');
+	width: $login-social-map-width;
+	height: 32px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+	&.facebook {
+		background-position: 0 0px;
+	}
+
+	&.google {
+		background-position: ($login-social-map-width * -1) 0;
+	}
+
+	&.github {
+		background-position: ($login-social-map-width * -2) 0;
+	}
+
+	&.linkedin {
+		background-position: ($login-social-map-width * -3) 0;
+	}
+}

@@ -1,0 +1,24 @@
+<section>
+	<article>
+		<h1>Histórico de Rankings</h1>
+		<label>Selecione uma data</label>
+		<select ng-model="rankingDate" ng-change="refreshHistory(rankingDate)">
+			<option ng-repeat="rankingDateValue in rankingDates" value="{{rankingDateValue.date}}">{{rankingDateValue.date}}</option>
+		</select>
+		<table class="u-full-width" >
+			<tbody>
+				<tr ng-repeat="rankingHistory in rankingHistories | orderBy: '-points'">
+					<td>
+						<strong>#{{$index + 1}}</strong> - [{{rankingHistory.user.name}}]
+						<p><strong>Pontos:</strong> {{rankingHistory.points}}</p>
+						<p><strong>Combinações:</strong> {{rankingHistory.combinations}}</p>
+						<p><strong>Nível:</strong> {{rankingHistory.level}}</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<a class="button button-primary button-jeco" href="/">Voltar</a>
+		</p>
+	</article>
+</section>

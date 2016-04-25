@@ -1,0 +1,13 @@
+$background-color-header: #0C648E;
+$background-color: #DCDCDC;
+$container-backgroud-color: #fff;
+
+$disable-background-color: #DCDCDC;
+$disable-border-color: #313131;
+$disable-font-color: #6B6B6B;
+
+$button-background-color: #CC4444;
+$button-background-color-hover: darken($button-background-color, 15%);
+
+$warning-color-lighten: $button-background-color;
+$warning-color-darken: lighten($warning-color-lighten, 30%);

@@ -1,0 +1,65 @@
+@import 'variables.scss';
+
+body {
+	background-color: $background-color;
+	overflow-y: scroll;
+}
+
+body::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 15%;
+	z-index: -1;
+	background-color: $background-color-header;
+	top: 0;
+	left: 0;
+}
+
+.container {
+	background-color: $container-backgroud-color;
+	padding: 10px;
+}
+
+tr {
+	td {
+		p {
+			margin: 0;
+		}
+	}
+}
+
+input:disabled {
+	color: $disable-font-color;
+	background-color: $disable-background-color;
+	border-color: $disable-border-color;
+}
+
+.button.button-jeco {
+	background-color: $button-background-color;
+	width: 100px;
+	padding: 0;
+}
+
+.button.button-jeco:hover {
+	background-color: $button-background-color-hover;
+}
+
+.centralizar {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+table caption {
+	text-decoration: underline;
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'grid/grid.scss';
+@import 'main/main.scss';
+@import 'ranking-history/ranking-history.scss';
+@import 'user/user.scss';
+@import 'variables.scss';
+// endinjector

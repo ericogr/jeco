@@ -4,12 +4,13 @@ dist: trusty
 node_js:
   - "stable"
 addons:
-  mongodb: 3.2
   apt:
     sources:
       - google-chrome
+      - mongodb-3.0-precise
     packages:
       - google-chrome-stable
+      - mongodb-org-server
 before_install:  
  - "export DISPLAY=:99.0"
  - "sh -e /etc/init.d/xvfb start"
@@ -18,3 +19,5 @@ before_script:
   - gem install sass
   - bower install
   - sleep 15
+services:
+  - mongodb

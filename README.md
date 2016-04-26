@@ -42,13 +42,15 @@ I'm using Ubuntu 16.04 LTS to develop, but you can adapt to your favorite flavor
 I can recomend [nvm](https://github.com/creationix/nvm) to install the latest version of Nodejs
 
 ## Install JAVA VM
-(required to run Selenium tests)
+(required to run Selenium e2e tests)
 
-`sudo add-apt-repository ppa:webupd8team/java`
+You can install only JRE, but these instructions includes a JDK
 
-`sudo apt-get update`
-
-`sudo apt-get install oracle-java8-installer`
+```shell
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+```
 
 ## Install Ruby
 `sudo apt-get install ruby` 
@@ -57,13 +59,13 @@ I can recomend [nvm](https://github.com/creationix/nvm) to install the latest ve
 `sudo gem install sass`
 
 ## Install Grunt
-npm install -g grunt-cli
+`npm install -g grunt-cli`
 
 ## Install Bower
-npm install -g bower
+`npm install -g bower`
 
 ## Install WebDriver
-(required to run Selenium tests)
+(required to run Selenium e2e tests)
 
 `npm run update-webdriver`
 

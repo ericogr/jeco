@@ -4,6 +4,7 @@ dist: trusty
 node_js:
   - "stable"
 addons:
+  mongodb: 3.2
   apt:
     sources:
       - google-chrome
@@ -17,4 +18,3 @@ before_script:
   - gem install sass
   - bower install
   - sleep 15
-services: mongodb

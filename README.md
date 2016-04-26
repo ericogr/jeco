@@ -1,4 +1,4 @@
-# JECO
+# JECO [![Build Status](https://travis-ci.org/ericogr/jeco.svg?branch=master)](https://travis-ci.org/ericogr/jeco)
 Jogo de Eliminação de Combinações Online
 
 ![alt tag](https://raw.githubusercontent.com/ericogr/jeco/master/docs/logotipo.png "Logo JECO")
